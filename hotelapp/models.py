@@ -3,25 +3,25 @@ from django.contrib.auth.models import User
 # Create your models here.
 class Hotels(models.Model):
     #h_id,h_name,owner ,location,rooms
-    name = models.CharField(max_length=30,default="ratchanon")
+    name = models.CharField(max_length=30,default="")
     owner = models.CharField(max_length=20)
     location = models.CharField(max_length=50)
-    state = models.CharField(max_length=50,default="maharashtra")
-    country = models.CharField(max_length=50,default="india")
+    state = models.CharField(max_length=50,default="")
+    country = models.CharField(max_length=50,default="")
     def __str__(self):
         return self.name
 
 
 class Rooms(models.Model):
     ROOM_STATUS = ( 
-    ("1", "available"), 
-    ("2", "not available"),    
+    ("1", "ว่าง"), 
+    ("2", "ไม่ว่าง"),    
     ) 
 
     ROOM_TYPE = ( 
-    ("1", "premium"), 
-    ("2", "deluxe"),
-    ("3","basic"),    
+    ("1", "ธรรมดา"), 
+    ("2", "ซูพีเรียร์"),
+    ("3","ดีลักซ์"),    
     ) 
 
     #type,no_of_rooms,capacity,prices,Hotel
