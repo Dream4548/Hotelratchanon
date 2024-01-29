@@ -215,6 +215,7 @@
         <th>Price</th>
         <th>Capacity</th>
         <th>Size</th>
+        <th>Location</th>
         <th colspan="2">Actions</th>
 
     </thead>
@@ -226,6 +227,7 @@
         <td>{{each_room.price}}</td>
         <td>{{each_room.capacity}}</td>
         <td>{{each_room.size}}</td>
+        <td>{{each_room.hotel}}</td>
         <td colspan="2">
             <a href="/staff/panel/edit-room?roomid={{each_room.id}}"><Button class="btn btn-danger">Edit</Button></a>
             <a href="/staff/panel/view-room?roomid={{each_room.id}}"><Button class="btn btn-primary">View</Button></a>
