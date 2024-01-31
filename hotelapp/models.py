@@ -6,7 +6,6 @@ class Hotels(models.Model):
     name = models.CharField(max_length=30,default="")
     owner = models.CharField(max_length=20)
     location = models.CharField(max_length=50)
-    state = models.CharField(max_length=50,default="")
     country = models.CharField(max_length=50,default="")
     def __str__(self):
         return self.name

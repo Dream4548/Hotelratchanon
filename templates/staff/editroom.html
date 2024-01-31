@@ -107,43 +107,43 @@
                 <form action="/staff/panel/edit-room/edit" method="POST">
                     {%csrf_token%}
                     <div class="form-group">
-                        <label for="pwd">Room Number:</label>
+                        <label for="pwd">เลขห้อง:</label>
                         <input type="number" class="form-control" id="roomnumber" name="roomnumber" value="{{room.roomnumber}}" disabled>
                     </div>
                     <div class="form-group">
-                        <label for="email">Room Type:</label>
+                        <label for="email">ประเภทห้อง:</label>
                         <select class="form-control" name="roomtype" id="roomtype">
                             
                             
                             
-                            <option  value=1>Premium</option>
-                            <option  value=2>Deluxe</option>
-                            <option  value=3>Basic</option>
+                            <option  value=1>ธรรมดา</option>
+                            <option  value=2>ซูพีเรียร์</option>
+                            <option  value=3>ดีลักซ์</option>
 
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="pwd">Capacity:</label>
+                        <label for="pwd">ความจุ:</label>
                         <input type="number" class="form-control " id="capacity" name="capacity" value="{{room.capacity}}">
                     </div>
                     <div class="form-group">
-                        <label for="pwd">Price:</label>
+                        <label for="pwd">ราคา:</label>
                         <input type="mumber" class="form-control " id="price" name="price" value="{{room.price}}">
                     </div>
                     <div class="form-group">
-                        <label for="pwd">Size:</label>
+                        <label for="pwd">ไซส์:</label>
                         <input type="number" class="form-control " id="size" name="size" value="{{room.size}}">
                     </div>
                     <div class="form-group">
-                        <label for="pwd">Status:</label>
+                        <label for="pwd">สถานะห้อง:</label>
                         <select class="form-control" name="status" id="status">
-                            <option value="1">Available</option>
-                            <option value="2">Not Available</option>
+                            <option value="1">ว่าง</option>
+                            <option value="2">ไม่ว่าง</option>
                             
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="pwd">Location:</label>
+                        <label for="pwd">จังหวัด:</label>
                         <input type="text" class="form-control " id="hotel" name="hotel" value="{{room.hotel.location}}" disabled>
                     </div>
                     <button type="submit" class="btn btn-danger">Save</button>

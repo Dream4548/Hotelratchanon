@@ -41,6 +41,4 @@ urlpatterns = [
     path('staff/panel/view-room', views.view_room),
 
     path('admin/', admin.site.urls),
-    
-
 ]

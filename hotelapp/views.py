@@ -6,6 +6,7 @@ from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 import datetime
+from django.shortcuts import render, redirect
 # Create your views here.
 
 #homepage
@@ -328,7 +329,6 @@ def add_new_location(request):
 
     else:
         return HttpResponse("Not Allowed")
-    
 #for showing all bookings to staff
 @login_required(login_url='/staff')
 def all_bookings(request):

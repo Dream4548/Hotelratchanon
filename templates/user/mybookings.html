@@ -1,15 +1,15 @@
 {% extends 'basic.html' %} {% block title %}Dashboard {% endblock title %} {% block body %}
 {% load app_tags %}
-<h3 class="text-center  text-success">My Bookings </h3>
+<h3 class="text-center  text-success">การจองของฉัน </h3>
 <table class="table">
     <thead>
-        <th>User</th>
-        <th>Room</th>
-        <th>Location</th>
-        <th>Person</th>
+        <th>ชื่อ</th>
+        <th>เลขห้อง</th>
+        <th>สถานที่</th>
+        <th>คน</th>
         <th>Check in</th>
         <th>Check out</th>
-        <th>Price</th>
+        <th>ราคา</th>
     </thead>
     {% for each_booking in bookings %}
     <tr>
@@ -20,6 +20,7 @@
         <td>{{each_booking.check_in}}</td>
         <td>{{each_booking.check_out}}</td>
         <td>{{each_booking.room.price}}</td>
+
     </tr>
     {% endfor %}
 
